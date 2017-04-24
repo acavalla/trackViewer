@@ -1,0 +1,50 @@
+import(grDevices, methods, S4Vectors, IRanges, 
+       GenomicRanges, GenomicFeatures, grid)
+import(Rsamtools)
+import(GenomicAlignments)
+importFrom(Gviz, GeneRegionTrack)
+importFrom(GenomeInfoDb, seqlevels, seqlengths, "genome<-")
+importFrom(AnnotationDbi, mapIds, columns)
+import(pbapply)
+importFrom(scales, rescale)
+#import(gWidgets)
+#import(gWidgetstcltk)
+importFrom(rtracklayer, import, getTable, ucscTableQuery, GRangesForUCSCGenome,
+           browserSession)
+importFrom(grImport, readPicture, grid.picture)
+importClassesFrom(grImport, "Picture")
+importFrom(tools, file_ext)
+
+exportClasses("pos", 
+              "trackStyle",
+              "trackViewerStyle", 
+              "track",
+              "trackList",
+              "xscale",
+              "yaxisStyle")
+exportMethods(setTrackViewerStyleParam,
+              setTrackStyleParam,
+              setTrackXscaleParam,
+              setTrackYaxisParam,
+              "$", "$<-", show)
+export(addArrowMark,
+       addGuideLine,
+       coverageGR,
+       dandelion.plot,
+       geneModelFromTxdb,
+       getCurTrackViewport,
+       GRoperator,
+       ideogramPlot,
+       importBam,
+       importData,
+       importScore,
+#       interactiveViewer,
+       loadIdeogram,
+       lolliplot,
+       optimizeStyle,
+       parse2GRanges,
+       parseWIG,
+       plotGRanges,
+       trackList,
+       trackViewerStyle,
+       viewTracks)
